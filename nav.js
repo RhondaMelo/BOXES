@@ -1,6 +1,6 @@
-////
 
-// Making #red disappear and show on mousedown/mouseup
+
+/* Making #red disappear and show on mousedown/mouseup
 
 // var disappearRed = function() {
 // 	document.querySelector("#red").style.opacity=0;
@@ -77,60 +77,30 @@
 // blue.addEventListener("mouseup",showBlue);
 
 
-/////////
+/////////*/
 
-//making loop . first make the array
+/*making loop . first make the array */
 
 var nav = [ '#red', '#purple','#yellow', '#green', '#blue'];
 
 for (var myCounter = 0; myCounter < nav.length; myCounter = myCounter+1){
-	//console.log(nav[myCounter]);
 	var each = document.querySelector(nav[myCounter]);
 	each.addEventListener("mousedown", function(mouseDownInfo){
 		var elementThatGotClicked = mouseDownInfo.toElement;
 		elementThatGotClicked.style.opacity=0;
-		console.log(mouseDownInfo.toElement);
+		console.log(mouseDownInfo.toElement);	
 	});
 
-//TO DO SUNDAY add the mouse up for this also being to wrote up for molly
+	each.addEventListener("mouseup", function(mouseUpInfo){
+		var elementThatGotClicked = mouseUpInfo.toElement;
+		elementThatGotClicked.style.opacity=1;
+		console.log(mouseUpInfo.toElement);
 
-
-	//console.log (each);
-//blue.addEventListener("mousedown",disappearBlue );
+	});
 }
 
-// var box = ["Rhonda", "Alec", "Molly", "Thomas"];
-// for (var x = 0; x < box.length; x = x+1) {
-// 	console.log(box);
-// }
 
 
-/*
-////////////
 
-var disappear = function(hashtag) {
-	document.querySelector(hashtag).style.opacity = 0;
-}
-var show = function(hashtag) {
-	document.querySelector(hashtag).style.opacity = 1;
-}
 
-var myDivHashtags = ['#red', '#purple', '#green', '#blue'];
 
-///////////////////////
-
-// Iterating over a list of four and printing out elements from an array
-var theFirstFour = ["Rhonda", "Alec", "C", "D"];
-
-var print = function(firstArg) {
-	console.log(firstArg);
-}
-
-for (var myCounter = 0; myCounter < theFirstFour.length; myCounter = myCounter+1) {
-	// print(theFirstFour[i]);
-	console.log(theFirstFour[myCounter]);
-}
-
-// for (var x = 0; x < 10; x = x+1) {
-// 	console.log(x);
-// }   */
